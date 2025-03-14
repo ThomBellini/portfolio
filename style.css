@@ -1,0 +1,9 @@
+body {
+    --color-primary: rgba(168, 190, 137, 0.643);
+    --color-primary-contrast:rgb(173, 111, 90);
+    --color-secondary: powderblue;
+    --color-secondary-contrast: honeydew;
+    --color-tertiary:rgb(255, 249, 165);
+
+    background-color: var(--color-primary);
+}
