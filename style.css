@@ -34,6 +34,19 @@ body {
         justify-content: flex-end;
         align-items: center;
     }
+    #aboutme {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    img {
+        max-height: 500px;
+        max-width: 500px;
+        border-radius: 20px;
+    }
     #socials {
         display: flex;
         flex-direction: column;
@@ -53,7 +66,8 @@ body {
     font-style: italic;
     font-size: 70%;
     border-radius: 19px;
-    height: 5%;
+
+    
     a:link, a:visited {
         background-color: transparent;
         color: transparent;
@@ -63,15 +77,18 @@ body {
         font-size: 120%;
         border: 2px solid transparent;
         color: var(--color-secondary);
+        padding: 10px;
 
     }
     a:hover, a:active {
         background-color:transparent;
         background-position: center;
         border-style: dotted;
-        border-color: var(--color-primary-contrast);
+        border-color: var(--color-tertiary);
         font-size: 120%;
         color: var(--color-tertiary);
+        border-radius: 10px;
+
     }
  }
 
@@ -87,7 +104,6 @@ body {
 p {
     color: var(--color-secondary);
     font-family: helvetica;
-    font-style: italic;
     font-size: 120%;
     margin-top: 5%;
     margin-left: 10%;
@@ -95,16 +111,59 @@ p {
     margin-bottom: 5%;
 }
 
-.photos {
- width: 30%;
- border-radius: 20px;
+/* MUSIC PAGE */
+
+#bandcamp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: var(--color-secondary);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
+
+#soundcloud {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#youtube {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: var(--color-secondary);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+/* } */
+
+
+#royalthom {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#instagram3d {
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
 
 /* about me box { */
 #aboutme {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-around;
     color: var(--color-secondary);
     font-family: helvetica;
@@ -114,21 +173,86 @@ p {
     margin-top: 10%;
     margin-bottom: 10%;
 }
-#aboutme img {
-    max-width: 40%;
-    height: 40%;
+#aboutmeimage {
+    max-width: 70%;
+    width: auto;
     border-radius: 20px;
 }
-#aboutme p {
-    width: 40%;
-    font-size: 120%;
+#aboutmetext {
+    font-size: large;
     background-color: var(--color-tertiary);
     border-radius: 20px;
     color: var(--color-primary-contrast);
-    padding: 10px;
+    padding: 20px;
+    resize: none;
     
 }
 /* } */
+
+ /* CONTACT ME FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-secondary);
+    font-family: helvetica;
+    font-style: italic;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;    
+    background-color: var(--color-tertiary);
+    color: var(--color-primary-contrast);
+    border-radius: 40px;
+}
+button {
+    background-color: var(--color-primary-contrast);
+    color: var(--color-primary);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 120%;
+    border: 2px solid transparent;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 10px;
+}
+button:hover {
+    background-color:var(--color-primary-contrast);
+    border-style: dotted;
+    border-color: var(--color-tertiary);
+    color: var(--color-tertiary);
+    border-radius: 30px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+input {
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+    text-align: center;
+    display: inline-block;
+    font-size: 120%;
+    border: 2px solid transparent;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 10px;
+}
+textarea {
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+    text-align: center;
+    display: inline-block;
+    font-size: 120%;
+    border: 2px solid transparent;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 10px;
+}
+/* } */
+
+
 
  #socials {
     background-color: var(--color-primary-contrast);
@@ -162,3 +286,4 @@ p {
     }
  }
 
+ 
