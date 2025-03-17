@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Thom Bellini - Quiz </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <div id="navbar">
+            <h2><a href="index.html"> <img src="imgs/logo.stl.gif" height="100px"> </a></h2>
+            <h2><a href="music.html"> Music </a></h2>
+            <h2><a href="3dprinting.html"> 3d Printing </a></h2>
+            <h2><a href="quiz.html"> Quiz </a></h2>
+            <h2><a href="about.html"> About Me </a></h2>
+            <h2><a href="contact.html"> Contact Me </a></h2>
+        </div>
+    </div>
+</br> </br> </br>
+
+    <h1>Thom Bellini Quiz</h1>
+    <p>Test your Knowledge on Thom Bellini!</p>
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="next-button" onclick="nextQuestion()">Next</button>
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "Thom was born in which city?",
+                choices: ["Manchester", "Birmingham", "London", "Glasgow"],
+                answer: "Manchester"
+            },
+            {
+                question: "At what age did Thom start playing guitar?",
+                choices: ["4 years old", "6 years old", "8 years old", "29 years old"],
+                answer: "8 years old"
+            },
+            {
+                question: "Which high school did Thom attend?",
+                choices: ["Harrytown", "Manchester Grammar", "Offerton", "Marple Hall"],
+                answer: "Marple Hall"
+            },
+            {
+                question: "What year was did Thom first go on tour with a band?",
+                choices: ["2005", "2010", "2015", "2020"],
+                answer: "2010"
+            },
+            {
+                question: "With which Band was Thom's first tour?",
+                choices: ["The Killers", "The Rolling Stones", "The Beatles", "The Who"],
+                answer: "Egyptian Hip Hop"
+            },
+            {
+                question: "Thom was the guitarist of which post punk band?",
+                choices: ["Squid", "DUDS", "Devo", "The Fall"],
+                answer: "DUDS"
+            },
+            {
+                question: "Who is Thom currently touring with?",
+                choices: ["Bono", "Sting", "Freddie Mercury", "BC Camplight"],
+                answer: "BC Camplight"
+            },
+            {
+                question: "Outside of music, what is Thom's other passion?",
+                choices: ["3D Printing", "Hiking", "Video Games", "Skydiving"],
+                answer: "3D Printing, Hiking and Video Games"
+            },
+            {
+                question: "Did Thom code this quiz, alongside everything else on this website?",
+                choices: ["Yes", "No"],
+                answer: "Yes"
+            },
+            {
+                question: "Does Thom like Coriander?",
+                choices: ["Yes", "No", "Absolutely not, it's disgusting", "What's Coriander?"],
+                answer: "Absolutely not, it's disgusting"
+            },
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const choicesElement = document.getElementById('choices');
+            const currentQuestion = questions[currentQuestionIndex];
+
+            questionElement.textContent = currentQuestion.question;
+            choicesElement.innerHTML = '';
+
+            currentQuestion.choices.forEach(choice => {
+                const button = document.createElement('button');
+                button.textContent = choice;
+                button.onclick = () => checkAnswer(choice);
+                choicesElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(choice) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (choice === currentQuestion.answer) {
+                alert('Correct!');
+                score++;
+            } else {
+                alert('Wrong answer. The correct answer is ' + currentQuestion.answer);
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                alert('Quiz completed! You scored ' + score + '/' + questions.length);
+            }
+        }
+
+        loadQuestion();
+    </script>
+
+<br>
+<br>  
+
+<footer>
+    <div>
+            <div id="socials">
+                <a href="https://www.facebook.com/thombellinimusic" target="_blank"><img src="imgs/facebook.png" alt="facebook logo"></a>
+                <a href="https://www.instagram.com/bellini3d/" target="_blank"><img src="imgs/instagram.png" alt="instagram logo"></a>
+                <a href="https://www.linkedin.com/in/thom-bellini-32b295110/" target="_blank"><img src="imgs/linkedin.png" alt="linkedin logo"></a>
+            </div>
+    </div>
+</footer>
+
+</body>
+</html>

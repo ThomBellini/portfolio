@@ -9,46 +9,7 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-    #navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    h1 {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    li {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    p {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #itembox {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    #aboutme {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        }
-    #socials {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        }
 
-}
 
 #navbar {
     overflow: hidden;
@@ -129,14 +90,30 @@ p {
 
 .youtube {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: var(--color-secondary);
+    justify-content: center;
 }
 
+.duds {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.bcjk   {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8%;
+    margin-right: 8%;
+}
  .col {
-    flex: 1;
-    padding: 10px;
+    flex: 4;
+    padding:3px;
+    width: 50%;
 }
-
 
 /* } */
 
@@ -247,7 +224,23 @@ textarea {
 }
 /* } */
 
+/* Game  */
 
+#question {
+    color: var(--color-secondary);
+    font-family: helvetica;
+    font-style: italic;
+    font-size: 200%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: double 5px var(--color-primary-contrast);
+    background-color: var(--color-tertiary);
+    color: var(--color-primary-contrast);
+    border-color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 10px;
+}
+/* } */
 
  #socials {
     background-color: var(--color-primary-contrast);
@@ -274,11 +267,71 @@ textarea {
     a:hover, a:active {
         background-color:var(--color-primary);
         border-style: dotted;
-        border-color: var(--color-primary);
+        border-color: var(--color-tertiary);
         color: var(--color-tertiary);
         border-radius: 30px;
         transform: scale(1.3);
     }
  }
 
- 
+ @media screen and (max-width: 600px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    h1 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    li {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #itembox {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #aboutme {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        }
+    #socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40%;
+        margin-right: 40%;
+        }
+    #bandcamp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    .duds {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    .bcjk {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+ }
