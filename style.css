@@ -81,7 +81,19 @@ margin-top: 10%;
 margin-bottom: 10%;
 }
 
-#bandcamp {
+#tbbandcamp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: var(--color-secondary);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#dudsbandcamp {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -328,7 +340,13 @@ textarea {
         margin-left: 40%;
         margin-right: 40%;
         }
-    #bandcamp {
+    #tbbandcamp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    #dudsbandcamp {
         display: flex;
         flex-direction: column;
         justify-content: center;
